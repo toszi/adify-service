@@ -15,5 +15,8 @@ jobs:
         fetch-depth: 0
         token: ${{secrets.MICROSERVICE_WORKSHOP_TOBIAS}}
 
+    - name: Run tests
+      run: mvn test -DskipTests=false -Dgroups=fast
+
     - name: Compile
       run: mvn install
